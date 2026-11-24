@@ -14,8 +14,11 @@ count, no clock, no unseeded randomness).
 
 `main.py` holds the engine as a compressed payload (lzma + base85) with a
 tiny unpacker, as the bounty allows; the payload and unpacker together
-are 3,782 bytes, under the 4,096-byte limit. The readable source it
-unpacks is the same engine, developed and tested locally.
+are 3,033 bytes, under the 4,096-byte limit. The readable source it
+unpacks is the same engine, developed and tested locally: move generation
+is verified against standard perft suites (startpos, Kiwipete and four
+more positions, depths 1-4), and it searches a fixed 150,000 nodes per
+move (about 1.4-2.9 s/move), deterministically.
 
 ## How it plays
 
